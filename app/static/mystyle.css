@@ -1,0 +1,20 @@
+body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+}
+.page-content {
+    position: relative;
+    margin-top: 75px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.navbar {
+    background-color: #F8F8F8;
+}
+
+#how-to-use {
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: #F8F8F8;
+}

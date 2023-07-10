@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="page-content">
+        <div class="page-header">
+            <h1>Hello, Welcome to WebARPES</h1>
+        </div>
+        <p>This is a work in progress to calculate photocurrents for transition metal-ligand planar clusters shown in the figure below in a tight-binding framework. ARPES matrix elements are calculated using hydrogenic orbitals.</p>
+        <p>I have assumed a work function for Cu=4.46 eV</p>
+        <p>More details about this web application can be found <a href="https://arxiv.org/abs/2108.07913">here</a>.</p>
+        <img src="static/unitcell.jpeg" alt="unitcell figure" width="780" height="480">
+        
+        <div id="how-to-use">
+            <h2>How To Use:</h2>
+            <ol>
+                <li>Go to <b>set parameters</b>.</li>
+                <li>Click <b>calculate</b>.</li>
+                <li>Click <b>plot bands</b> to plot ARPES bands through specified cuts.</li>
+                <li>click <b>plot DOS</b> to plot DOS.</li>
+                <li>Click <b>plot contour</b> to plot spectral function at fixed energy.</li>
+                <li>Click <b>ARPES datafile</b> to download ARPES datafile.</li>
+            </ol>
+        </div>
+
+        <h2>Things to be added:</h2>
+        <ul>
+            <li>cell basis</li>
+            <li>point group symmetry</li>
+        </ul>
+    </div>
+{% endblock %}
