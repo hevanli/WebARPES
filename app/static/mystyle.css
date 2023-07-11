@@ -2,6 +2,11 @@ body {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-size: 16px;
 }
+
+.page-header #main-title {
+    text-shadow: 1px 1px 1px rgb(58, 183, 255);
+}
+
 .page-content {
     position: relative;
     margin-top: 75px;
