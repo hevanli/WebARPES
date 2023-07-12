@@ -1,3 +1,7 @@
+:root {
+    --background-color: white;
+    --accent-color: #f8f8f8; 
+}
 body {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-size: 16px;
@@ -14,11 +18,11 @@ body {
 }
 
 .navbar {
-    background-color: #F8F8F8;
+    background-color: var(--accent-color);
 }
 
 #how-to-use {
     padding: 10px;
     border: 1px solid #eee;
-    background-color: #F8F8F8;
+    background-color: var(--accent-color);
 }

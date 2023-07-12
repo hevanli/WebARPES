@@ -8,4 +8,18 @@ def index():
 
 @frontendbp.route('/setparams')
 def setparams():
-    return render_template('setparams.html', title='Set Parameters')
+    lattices = [
+        {
+            "type": "lieb",
+            "label": "Lieb Lattice",
+            "imagePath": "static/images/LiebLattice.png",
+            "apc": 3 # atoms per cell
+        },
+        {
+            "type": "triangular",
+            "label": "Triangular Lattice",
+            "imagePath": "static/images/TriangularLattice.png",
+            "apc": 1 # atom per cell
+        },
+    ]
+    return render_template('setparams.html', title='Set Parameters', lattices=lattices)
