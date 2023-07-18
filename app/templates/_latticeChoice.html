@@ -1,9 +1,10 @@
-<!-- lattice choice subtemplate -->
-<div class="{{ lattice.type }}">
-    <button class="btn" id="{{ lattice.type }}-button">
-        <img src="{{ lattice.imagePath }}" alt="{{ lattice.label }}" width="250" height="250">
+<!-- lattice choice subtemplate  -->
+<div class="{{ lattice.type }} lattice-choice">
+    <button type="button" class="btn lattice-button" id="{{ lattice.type }}-button">
+        <img src="static/images/{{ lattice.image }}" alt="{{ lattice.label }}" width="250" height="250">
+        <div class="lattice-label">
+            <input class="radio-input" type="radio" id="{{ lattice.type }}-radio" name="lattices" value="{{ lattice.type }}">
+            <label for="{{ lattice.type }}-radio">{{ lattice.label }} <span class="apc">({% if lattice.apc == 1 %}1 atom per cell{% else %}{{lattice.apc}} atoms per cell{% endif %})</span></label>
+        </div>
     </button>
-    <input type="radio" id="{{ lattice.type }}-radio" name="lattices" value="{{ lattice.type }}">
-    <label for="{{ lattice.type }}-radio">{{ lattice.label }} </label>
-    <span>({% if lattice.apc == 1 %}1 atom per cell{% else %}{{lattice.apc}} atoms per cell{% endif %})</span><br>
 </div>

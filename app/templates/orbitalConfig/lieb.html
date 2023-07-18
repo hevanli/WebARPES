@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="page-content">
+        <div class="page-header">
+            <h1>Lieb Lattice Orbital Configuration</h1>
+        </div>
+
+        <img src="../../static/images/LiebLattice.png" alt="Lieb Lattice" width="250" height="250">
+        <br>
+
+        {% set label = "test" %}
+        {% include '_atomConfig.html' %}
+        
+    </div>
+{% endblock %}

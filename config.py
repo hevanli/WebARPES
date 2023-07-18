@@ -1,2 +1,5 @@
+import os
+
 class Config(object):
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'temp-secret-key'
     BOOTSTRAP_BTN_STYLE = 'primary'

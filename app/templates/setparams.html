@@ -5,25 +5,28 @@
     <div class="page-content">
         <!-- Header -->
         <h1 class="page-header">Set Parameters</h1>
-        <h3>Please select a lattice</h3>
 
-        <!-- lattices container -->
-        <div id="lattices-container">
-            {% for lattice in lattices %}
-                {% include '_latticeChoice.html' %}
-            {% endfor %}
-        </div>
-        <!-- ! lattice container -->
+        <form action="{{ url_for('frontend.setparams') }}" method="POST">
+            <div id="select">
+                <h3>Please select a lattice geometry</h3>
+                <input type="submit" value="Submit" id="submit-button" class="btn" disabled>
+            </div>
+            <div id="lattices-container">
+                {% for lattice in lattices %}
+                    {% include '_latticeChoice.html' %}
+                {% endfor %}
+            </div>
+        </form>
     </div>
     <!-- ! Page Content -->
 {% endblock %}
 
 {% block styles %}
     {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static', filename='setparams.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/setparams.css')}}">
 {% endblock %}
 
 {% block scripts %}
     {{ super() }}
-    <script src="{{url_for('static', filename='myscripts.js')}}"></script>
+    <script src="{{url_for('static', filename='javascript/setparams.js')}}"></script>
 {% endblock %}

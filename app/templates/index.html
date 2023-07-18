@@ -1,20 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {{ super() }}
     <div class="page-content">
         <div class="page-header">
             <h1>Hello, Welcome to <span id="main-title">WebARPES</span></h1>
         </div>
+
+        {% for message in get_flashed_messages() %}
+            <div class="alert" style="color: red;">{{ message }}</div>
+        {% endfor %}
+
         <p>WebARPES is a work in progress to calculate photocurrents for transition metal-ligand planar clusters in a tight-binding framework, as shown in the figure below. ARPES matrix elements are calculated using hydrogenic orbitals.</p>
         <p>I have assumed a work function for Cu=4.46 eV</p>
         <p>More details about this web application can be found <a href="https://arxiv.org/abs/2108.07913">here</a>.</p>
-        <img src="static/unitcell.jpeg" alt="unitcell figure" width="780" height="480">
+        <!-- <img src="static/images/unitcell.jpeg" alt="unitcell figure" width="780" height="480"> -->
         
         <div id="how-to-use">
             <h2>How To Use:</h2>
             <ol>
                 <li>Go to <b>set parameters</b>.</li>
-                <li>Click <b>calculate</b>.</li>
+                <li>Select a <b>lattice geometry</b>.</li>
+                <li>Select the orbital type for each atom in a cell of the chosen lattice</li>
+                <li>Input momentum information for each orbital sub-level</li>
+                <li>Submit and wait for calcuations</li>
                 <li>Click <b>plot bands</b> to plot ARPES bands through specified cuts.</li>
                 <li>click <b>plot DOS</b> to plot DOS.</li>
                 <li>Click <b>plot contour</b> to plot spectral function at fixed energy.</li>
