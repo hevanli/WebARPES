@@ -2,7 +2,7 @@
 function displayInputs() {
     // remove current inputs on the page so you don't get duplicates
     inputs = document.getElementsByClassName('orbital-energy');
-    while (inputs[0]) { inputs[0].parentNode.removeChild(inputs[0]); }
+    while (inputs.length > 0) { inputs[0].parentNode.removeChild(inputs[0]); }
 
     // adds the appropriate number of text inputs to each group
     groups = document.getElementsByClassName('selection-group');

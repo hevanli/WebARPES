@@ -5,10 +5,11 @@
         <div class="page-header">
             <h1>Triangular Lattice Orbital Configuration</h1>
         </div>
-        <img src="../../static/images/TriangularLattice.png" alt="Triangular Lattice" width="250" height="250">
+
+        <img class="img-thumbnail" src="../../static/images/TriangularLattice.png" alt="Triangular Lattice" width="250" height="250">
         <br>
 
-        <form class="orbital-config">
+        <form class="orbital-config" method="POST">
             {% set labels = ["Transition Metal"] %}
             {% set autos = ["d"] %}
             {% for i in range(1) %}

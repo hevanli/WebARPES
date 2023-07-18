@@ -6,10 +6,10 @@
             <h1>Lieb Lattice Orbital Configuration</h1>
         </div>
 
-        <img src="../../static/images/LiebLattice.png" alt="Lieb Lattice" width="250" height="250">
+        <img class="img-thumbnail" src="../../static/images/LiebLattice.png" alt="Lieb Lattice" width="250" height="250">
         <br>
 
-        <form class="orbital-config">
+        <form class="orbital-config" method="POST">
             {% set labels = ["Transition Metal", "Ligand", "Ligand"] %}
             {% set autos = ["d", "p", "p"] %}
             {% for i in range(3) %}

@@ -13,13 +13,16 @@ body {
 .page-content {
     position: relative;
     margin-top: 75px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-bottom: 100px;
 }
 
 .navbar {
     background-color: var(--accent-color);
 }
+
+.navbar-toggle .icon-bar{ background-color: black;}
 
 #how-to-use {
     padding: 10px;
