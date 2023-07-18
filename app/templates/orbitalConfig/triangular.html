@@ -6,6 +6,24 @@
             <h1>Triangular Lattice Orbital Configuration</h1>
         </div>
         <img src="../../static/images/TriangularLattice.png" alt="Triangular Lattice" width="250" height="250">
-    </div>
+        <br>
 
+        <form class="orbital-config">
+            {% set labels = ["Transition Metal"] %}
+            {% set autos = ["d"] %}
+            {% for i in range(1) %}
+                {% include '_atomConfig.html' %}
+            {% endfor %}
+        </form>
+    </div>
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/orbitalconfig.css')}}">
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{url_for('static', filename='javascript/orbitalconfig.js')}}"></script>
 {% endblock %}

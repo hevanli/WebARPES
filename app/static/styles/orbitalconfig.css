@@ -1,0 +1,9 @@
+.orbital-config {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-control {
+    width: 100px;
+}

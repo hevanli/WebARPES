@@ -1,7 +1,9 @@
-<label>atom {{ label }} orbital level</label>
-<select name="orbital-level">
-    <option>s</option>
-    <option>p</option>
-    <option selected="selected">d</option>
-    <option>f</option>
-</select>
+<div class="selection-group">
+    <label for="select-{{i}}">{{ labels[i] }} orbital energies from ε<sub>x2-y2</sub> [eV]</label>
+    <select id="select-{{i}}" class="form-control" name="orbital-levels">
+        <option id="s" value="s" {% if autos[i] == "s" %}selected{% endif %}>s</option>
+        <option id="p" value="p" {% if autos[i] == "p" %}selected{% endif %}>p</option>
+        <option id="d" value="d" {% if autos[i] == "d" %}selected{% endif %} >d</option>
+        <option id="f" value="f" {% if autos[i] == "f" %}selected{% endif %}>f</option>
+    </select>
+</div>
