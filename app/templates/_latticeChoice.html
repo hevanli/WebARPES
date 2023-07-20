@@ -4,8 +4,8 @@
         <img src="static/images/{{ lattice.image }}" alt="{{ lattice.label }}" width="250" height="250">
         <div class="lattice-label">
             <input class="radio-input" type="radio" id="{{ lattice.type }}-radio" name="lattices" value="{{ lattice.type }}">
-            <label for="{{ lattice.type }}-radio">{{ lattice.label }}</label>
-            <p>({% if lattice.apc == 1 %}1 atom per cell{% else %}{{lattice.apc}} atoms per cell{% endif %})</p>
+            <label class="text-center" for="{{ lattice.type }}-radio">{{ lattice.label }}</label>
+            <p class="text-center">({% if lattice.apc == 1 %}1 atom/cell{% else %}{{lattice.apc}} atoms/cell{% endif %})</p>
         </div>
     </button>
 </div>

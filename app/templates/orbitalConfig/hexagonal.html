@@ -7,14 +7,17 @@
         </div>
 
         <img class="img-thumbnail" src="../../static/images/HexagonalLattice.png" alt="Hexagonal Lattice" width="250" height="250">
-        <br>
 
         <form class="orbital-config" method="POST">
+            {% include '_basicparams.html' %}
+
             {% set labels = ["Transition Metal", "Transition Metal"] %}
             {% set autos = ["d", "d"] %}
             {% for i in range(2) %}
                 {% include '_atomConfig.html' %}
             {% endfor %}
+            
+            <input class="btn" type="submit" value="submit">
         </form>
     </div>
 {% endblock %}

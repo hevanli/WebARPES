@@ -39,10 +39,3 @@
 .lattice-choice { width: 40%; }
 
 .radio-input { visibility: hidden; }
-
-.lattice-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-

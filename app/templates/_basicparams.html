@@ -1,0 +1,96 @@
+<div class="basic-params">
+    <label id="xyz">Polarization for incident light (x,y,z): 
+        <select class="xyz-select" aria-labelledby="xyz" name="polarization-x">
+            <option value="1" selected>1</option>
+            <option value="1">0</option>
+            <option value="1">-1</option>
+        </select>
+        <select class="xyz-select" aria-labelledby="xyz" name="polarization-y">
+            <option value="1" selected>1</option>
+            <option value="1">0</option>
+            <option value="1">-1</option>
+        </select>
+        <select class="xyz-select" aria-labelledby="xyz" name="polarization-z">
+            <option value="1">1</option>
+            <option value="1" selected>0</option>
+            <option value="1">-1</option>
+        </select>
+    </label>
+
+    <p>
+        <label for="contour">Energy for contour plot [eV]: </label>
+        <input type="number" id="contour" value=0.5 required>
+    </p>
+    <p>
+        <label for="photon">Incident photon energy [eV]: </label>
+        <input type="number" id="photon" value=6.0 required>
+    </p>
+    <p>
+        <label for="constant">Lattice constant [Angstroms]: </label>
+        <input type="number" id="constant" value=3.8 required>
+    </p>
+    <p>
+        <label for="coupling">Transition metal spin-orbit coupling [eV]: </label>
+        <input type="number" id="coupling" value=0.01 required>
+    </p>
+    <p><i>For the following, please choose momentum points for your cut on a grid: k="value entered"π/64: </i></p>
+    <p>
+        <label for="startingkx">Starting kx</label> 
+        [-64...63]: 
+        <input type="int" name="startingkx" id="startingkx" value="0"> 
+    </p>
+    <p>
+        <label for="startingky">Starting ky</label> 
+        [-64...63]: 
+        <input type="int" name="startingky" id="startingky" value="0"> 
+    </p>
+    <p>
+        <label for="endingkx">Ending kx</label> 
+        [-64...63, greater than or equal to initial kx]: 
+        <input type="int" name="endingkx" id="endingkx" value="63"> 
+    </p>
+    <p>
+        <label for="endingky">Ending ky</label> 
+        [-64...63, greater than or equal to initial ky]: 
+        <input type="int" name="endingky" id="endingky" value="0"> 
+    </p>
+    <p>Which degree of freedom do you want to view?</p>
+    <p> 1-11: d<sub>x2-y2,↑</sub>,d<sub>z2,↑</sub>,d<sub>xy,↑</sub>,d<sub>xz,↓</sub>,d<sub>yz,↓</sub>,O<sub>xx,↑</sub>,O<sub>xx,↑</sub>,... </p>
+    <p> 12-22: d<sub>x2-y2,↓</sub>,d<sub>z2,↓</sub>,d<sub>xy,↓</sub>,d<sub>xz,↑</sub>,d<sub>yz,↑</sub>,O<sub>xx,↓</sub>,O<sub>xx,↓</sub>,... </p>
+    <select class="form-control" name="freedom">
+        <option value="1" selected="">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+    </select>
+
+    <p>
+        <b>Hybridizations:</b>
+        V<sub>pdσ</sub> [eV]: 
+        <input type="float" name="seventeenth" id="seventeenth" value="0.5">
+        V<sub>pdπ</sub> [eV]: 
+        <input type="float" name="eighteenth" id="eighteenth" value="0.25"> 
+        V<sub>ppσ</sub> [eV]: 
+        <input type="float" name="nineteenth" id="nineteenth" value="0.1"> 
+        V<sub>ppπ</sub> [eV]: 
+        <input type="float" name="twentieth" id="twentieth" value="0.05">
+    </p>
+</div>

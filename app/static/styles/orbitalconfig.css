@@ -5,6 +5,18 @@
     margin: 20px;
 }
 
-.form-control {
-    width: 100px;
+.form-control { width: 100px; }
+
+img { display: block; }
+
+.btn {
+    margin-top: 20px;
+    height: 10%;
+    width: 15%;
+}
+
+.basic-params { flex-basis: 100%; }
+
+.xyz-select {
+    font-weight: normal;
 }

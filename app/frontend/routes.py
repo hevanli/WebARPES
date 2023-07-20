@@ -16,32 +16,32 @@ def setparams():
     lattices = [
         {
             "type": "lieb",
-            "label": "Lieb Lattice",
+            "label": "Lieb",
             "image": "LiebLattice.png",
             "apc": 3 # atoms per cell
         },
         {
             "type": "triangular",
-            "label": "Triangular Lattice",
+            "label": "Triangular",
             "image": "TriangularLattice.png",
             "apc": 1 # atom per cell
         },
         {
             "type": "hexagonal",
-            "label": "Hexagonal Lattice",
+            "label": "Hexagonal",
             "image": "HexagonalLattice.png",
             "apc": 2 # atoms per cell
         },
         {
             "type": "kagome",
-            "label": "Kagome Lattice",
+            "label": "Kagome",
             "image": "KagomeLattice.png",
             "apc": 3 # atoms per cell
         }
     ]
     return render_template('setparams.html', title='Set Parameters', lattices=lattices)
 
-@frontendbp.route('/orbitals/<lattice>')
+@frontendbp.route('/orbitals/<lattice>', methods=["GET", "POST"])
 def orbitals(lattice):
     if lattice == "lieb": 
         return render_template('orbitalConfig/lieb.html', title="Lieb Lattice")
@@ -52,3 +52,7 @@ def orbitals(lattice):
     elif lattice == "kagome":
         return render_template('orbitalConfig/kagome.html', title="Kagome Lattice")
     return lattice
+
+@frontendbp.route('/easter_egg')
+def easter_egg():
+    return "<h1>Hi, I'm Evan!</h1>"
