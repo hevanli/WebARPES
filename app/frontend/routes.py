@@ -53,6 +53,6 @@ def orbitals(lattice):
         return render_template('orbitalConfig/kagome.html', title="Kagome Lattice")
     return lattice
 
-@frontendbp.route('/easter_egg')
+@frontendbp.route('/345t3r_3gg')
 def easter_egg():
     return "<h1>Hi, I'm Evan!</h1>"
