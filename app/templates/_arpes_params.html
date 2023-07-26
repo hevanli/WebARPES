@@ -2,36 +2,32 @@
     <label id="xyz">Polarization for incident light (x,y,z): 
         <select class="xyz-select" aria-labelledby="xyz" name="polarization-x">
             <option value="1" selected>1</option>
-            <option value="1">0</option>
-            <option value="1">-1</option>
+            <option value="0">0</option>
+            <option value="-1">-1</option>
         </select>
         <select class="xyz-select" aria-labelledby="xyz" name="polarization-y">
             <option value="1" selected>1</option>
-            <option value="1">0</option>
-            <option value="1">-1</option>
+            <option value="0">0</option>
+            <option value="-1">-1</option>
         </select>
         <select class="xyz-select" aria-labelledby="xyz" name="polarization-z">
             <option value="1">1</option>
-            <option value="1" selected>0</option>
-            <option value="1">-1</option>
+            <option value="0" selected>0</option>
+            <option value="-1">-1</option>
         </select>
     </label>
 
     <p>
         <label for="contour">Energy for contour plot [eV]: </label>
-        <input type="number" id="contour" value=0.5 required>
+        <input type="number" id="contour" name="contour" value=0.5 required>
     </p>
     <p>
         <label for="photon">Incident photon energy [eV]: </label>
-        <input type="number" id="photon" value=6.0 required>
+        <input type="number" id="photon" name="photon" value=6.0 required>
     </p>
     <p>
         <label for="constant">Lattice constant [Angstroms]: </label>
-        <input type="number" id="constant" value=3.8 required>
-    </p>
-    <p>
-        <label for="coupling">Transition metal spin-orbit coupling [eV]: </label>
-        <input type="number" id="coupling" value=0.01 required>
+        <input type="number" id="constant" name="constant" value=3.8 required>
     </p>
     <p><i>For the following, please choose momentum points for your cut on a grid: k="value entered"π/64: </i></p>
     <p>
@@ -81,16 +77,4 @@
         <option value="21">21</option>
         <option value="22">22</option>
     </select>
-
-    <p>
-        <b>Hybridizations:</b>
-        V<sub>pdσ</sub> [eV]: 
-        <input type="float" name="seventeenth" id="seventeenth" value="0.5">
-        V<sub>pdπ</sub> [eV]: 
-        <input type="float" name="eighteenth" id="eighteenth" value="0.25"> 
-        V<sub>ppσ</sub> [eV]: 
-        <input type="float" name="nineteenth" id="nineteenth" value="0.1"> 
-        V<sub>ppπ</sub> [eV]: 
-        <input type="float" name="twentieth" id="twentieth" value="0.05">
-    </p>
 </div>

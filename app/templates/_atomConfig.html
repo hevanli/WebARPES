@@ -1,6 +1,6 @@
 <div class="selection-group">
-    <label for="select-{{i}}">{{ labels[i] }} orbital energies <small>from ε<sub>x2-y2</sub> [eV]</small></label>
-    <select id="select-{{i}}" class="form-control" name="orbital-levels">
+    <label for="select-{{i}}">Particle {{i+1}} orbital energies <small>from ε<sub>x2-y2</sub> [eV]</small></label>
+    <select id="select-{{i}}" class="form-control" name="orbital-levels-{{i}}">
         <option id="s" value="s" {% if autos[i] == "s" %}selected{% endif %}>s</option>
         <option id="p" value="p" {% if autos[i] == "p" %}selected{% endif %}>p</option>
         <option id="d" value="d" {% if autos[i] == "d" %}selected{% endif %} >d</option>

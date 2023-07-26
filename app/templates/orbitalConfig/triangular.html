@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block app_content %}
     <div class="page-content">
         <div class="page-header">
             <h1>Triangular Lattice Orbital Configuration</h1>
@@ -9,13 +9,17 @@
         <img class="img-thumbnail" src="../../static/images/TriangularLattice.png" alt="Triangular Lattice" width="250" height="250">
 
         <form class="orbital-config" method="POST">
-            {% include '_basicparams.html' %}
+            <h2>ARPES Parameters</h2>
+            {% include '_arpes_params.html' %}
 
-            {% set labels = ["Transition Metal"] %}
-            {% set autos = ["d"] %}
-            {% for i in range(1) %}
-                {% include '_atomConfig.html' %}
-            {% endfor %}
+            <h2>Other Parameters</h2>
+            <div class="orbital-selection">
+                {% set labels,autos = ["Transition Metal"],["d"] %}
+                {% for i in range(1) %}
+                    {% include '_atomConfig.html' %}
+                {% endfor %}
+            </div>
+            {% include '_other_params.html' %}
 
             <input class="btn" type="submit" value="submit">
         </form>

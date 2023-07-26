@@ -37,10 +37,10 @@ function createLabel(i, num, inner) {
 // create input fields
 function createInput(i, num) {
     const input = document.createElement("input");
-    input.type = "number";
+    input.type = "float";
     input.className = "orbital-energy form-control"
     input.required = true;
-    input.name = "orbital-energy"
+    input.name = "orbital-energy-"+i+"-"+num;
     input.id = "input-"+i+"-"+num;
     input.style.display = "inline-block";
     return input;

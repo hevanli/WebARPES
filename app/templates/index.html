@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    {{ super() }}
+{% block app_content %}
     <div class="page-content">
         <div class="page-header">
             <h1>Hello, Welcome to <span id="main-title">WebARPES</span></h1>
@@ -14,7 +13,7 @@
         <p>WebARPES is a work in progress to calculate photocurrents for transition metal-ligand planar clusters in a tight-binding framework, as shown in the figure below. ARPES matrix elements are calculated using hydrogenic orbitals.</p>
         <p>The work function is assumed to be Cu=4.46 eV</p>
         <p>More details about this web application can be found <a href="https://arxiv.org/abs/2108.07913">here</a>.</p>
-        <!-- <img src="static/images/unitcell.jpeg" alt="unitcell figure" width="780" height="480"> -->
+        <img src="static/images/ARPES.jpg" alt="unitcell figure" width="500" height="385">
         
         <div id="how-to-use">
             <h2>How To Use:</h2>
@@ -31,7 +30,7 @@
             </ol>
         </div>
 
-        <h2>Things to be added:</h2>
+        <h2>In Progress:</h2>
         <ul>
             <li>cell basis</li>
             <li>point group symmetry</li>

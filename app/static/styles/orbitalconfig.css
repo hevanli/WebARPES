@@ -3,6 +3,20 @@
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 20px;
+    flex-direction: column;
+}
+
+.orbital-selection {
+    display: flex;
+    flex-direction: row;
+}
+
+.selection-group {
+    margin: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
 }
 
 .form-control { width: 100px; }
@@ -19,4 +33,8 @@ img { display: block; }
 
 .xyz-select {
     font-weight: normal;
+}
+
+h2 {
+    background-color: var(--accent-color);
 }

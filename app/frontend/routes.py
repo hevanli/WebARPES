@@ -5,12 +5,12 @@ from app.frontend import frontendbp
 @frontendbp.route('/index')
 def index():
     header= "Hello, Welcome to <span id='main-title'>WebARPES</span>"
-    return render_template('index.html', title='Home', header=header)
+    return render_template('index.html', title='Home-WebARPES', header=header)
 
 @frontendbp.route('/setparams', methods=["GET", "POST"])
 def setparams():
     if request.method == "POST":
-        selected_lattice=request.form['lattices']
+        selected_lattice = request.form['lattices']
         return redirect(url_for('frontend.orbitals', lattice=selected_lattice))
 
     lattices = [
@@ -39,10 +39,16 @@ def setparams():
             "apc": 3 # atoms per cell
         }
     ]
-    return render_template('setparams.html', title='Set Parameters', lattices=lattices)
+    return render_template('setparams.html', title='Set Parameters-WebARPES', lattices=lattices)
 
 @frontendbp.route('/orbitals/<lattice>', methods=["GET", "POST"])
 def orbitals(lattice):
+    if request.method == "POST":
+        form_data = request.form.items()
+        for k,v in form_data:
+            print("key:", k)
+            print("value:", v)
+
     if lattice == "lieb": 
         return render_template('orbitalConfig/lieb.html', title="Lieb Lattice")
     elif lattice == "triangular":
@@ -52,6 +58,10 @@ def orbitals(lattice):
     elif lattice == "kagome":
         return render_template('orbitalConfig/kagome.html', title="Kagome Lattice")
     return lattice
+
+@frontendbp.route('/upload')
+def upload():
+    return render_template('upload.html', title='Upload-WebARPES')
 
 @frontendbp.route('/345t3r_3gg')
 def easter_egg():
